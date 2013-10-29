@@ -1,0 +1,208 @@
+*
+{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* =Basic HTML, Non-essential
+----------------------------------------------------------------------*/
+
+a
+{
+	text-decoration: none;
+}
+
+body
+{
+	background: #fff;
+	color: #777;
+	margin: 0 auto;
+	padding: 50px;
+	position: relative;
+	width: 620px;
+}
+
+h1
+{
+	background: inherit;
+	border-bottom: 1px dashed #ccc;
+	color: #933;
+	font: 17px Georgia, serif;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+	text-align: center;
+}
+
+p
+{
+	clear: both;
+	font: 10px Verdana, sans-serif;
+	padding: 10px 0;
+	text-align: center;
+}
+
+p a
+{
+	background: inherit;
+	color: #777;
+}
+
+p a:hover
+{
+	background: inherit;
+	color: #000;
+}
+
+/* =Hoverbox Code
+----------------------------------------------------------------------*/
+
+
+
+.hoverbox
+{
+	cursor: default;
+	list-style: none;
+}
+
+.hoverbox a
+{
+	cursor: default;
+}
+
+.hoverbox a .preview
+{
+	display: none;
+}
+
+.hoverbox a:hover .preview
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+
+.hoverbox img
+{
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	padding: 2px;
+	vertical-align: top;
+	//width: 191px;
+	//height: 189px;
+	width: 290px;
+	height: 318px;
+	float: left;
+}
+
+img.right { padding: 4px; margin: 0 0 2px 7px; display: inline; }
+img.left { padding: 4px; margin: 0 7px 2px 0; display: inline; }
+
+.right { float: right; }
+.left { float: left; }
+
+.hoverbox li
+{
+	background: inherit;
+	//border-color: #ddd #bbb #aaa #ccc;
+	//border-style: solid;
+	border-width: 0px;
+	color: inherit;
+	display: inline;
+	float: left;
+	margin: 3px;
+	padding: 5px;
+	position: relative;
+}
+
+.hoverbox .preview
+{
+	border-color: #000;
+	width: 471px;
+	height: 516px;
+	float:  left;
+}
+
+.hoverbox .home_large
+{
+	border-color: #000;
+	width: 471px;
+	height: 516px;
+	float:  left;
+}
+
+.hoverbox a .home_large
+{
+	display: none;
+}
+
+.hoverbox a:hover .home_large
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.hoverbox .stats_large
+{
+	border-color: #000;
+	width: 471px;
+	height: 604px;
+	float:  left;
+}
+
+.hoverbox a .stats_large
+{
+	display: none;
+}
+
+.hoverbox a:hover .stats_large
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.hoverbox .enterscore_large
+{
+	border-color: #000;
+	width: 471px;
+	height: 633px;
+	float:  left;
+}
+
+.hoverbox a .enterscore_large
+{
+	display: none;
+}
+
+.hoverbox a:hover .enterscore_large
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+

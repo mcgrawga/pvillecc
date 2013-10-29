@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}Scores{% endblock %}
+{% block content %}
+<div id="content-main">
+
+<p>Pick a golfer to enter a score on their behalf.  You will be logged into their account and taken directly to their "Enter Score" page.
+After you enter their score, you will be redirected back to this page.</p>
+<br><br>
+{% if member_list %}
+    <table border="1" cellspacing="0" cellpadding="2">
+    {% for member in member_list %}
+        <tr class="{% cycle 'CourseList2' 'CourseList1'%}"><td> {{ member.lname }}, {{ member.fname }}</td>
+        <td><a name="{{ member.id }}"></a>
+        <form action="/handicalc9/addscore.php" method="POST">
+        <input type="hidden" name="Email" value="{{ member.email }}">
+        <input type="hidden" name="Password" value="{{ member.password }}">
+        <input type="submit" name="LoginUser" value="Login">
+        </form>
+        </td></tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No members, enter some.</p>
+{% endif %}
+</p>
+</div>
+{% endblock %}
+

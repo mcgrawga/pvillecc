@@ -1,0 +1,41 @@
+	
+		
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		
+		<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+		<head>
+		<title>StatGolf</title>
+		<link rel="stylesheet" type="text/css"
+		href="style.css" />
+		</head>
+		<body>
+		
+		<div id="container">
+            <div id="top"></div>
+    		<div id="main_login">
+                <div id="paragraphtext">
+                <h1>Handicap Calculator</h1>
+                		<form action="home.php" method="POST" name="logintable" class="logintable">
+                        <table align="center">
+                		<tr><td align="left"><b>Email:</b></td><td><input type="text" name="Email"></td></tr>
+                		<tr><td align="left"><b>Password:</b></td><td><input type="password" name="Password"></td></tr>
+                		<tr><td  align="left"><input type="submit" value="Login" name="LoginUser"></td></tr>
+                        </table>
+                        </form>
+                		<div id="leftlinks">
+                    		<A  HREF="newuser.php?SendPassword=1">Forgot Password</A><br>
+                        </div>
+                		<script language="JavaScript">
+                			<!--
+                			document.logintable.Email.focus()
+                			//-->
+                		</script>
+
+                </p>
+                </div>
+    		</div>
+            <div id="footer"></div>
+        </div>
+</body>
+</html>

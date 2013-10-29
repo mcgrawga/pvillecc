@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block CONTENT %}
+<h1 style="margin: 0px 0px 0px 0px;">Newsletters</h1>
+
+
+{% if year_list %}
+    <div style="margin: 0px 0px 0px 0px;">
+    {% for d in year_list %}
+        {% if forloop.last %}
+            <span class="NineHoleScoreFont"><a class="calendarlinks" href="{% url tools.views.newsletters %}/{{ d.year }}">{{ d.year }}</a></span><br><br>
+        {% else %}
+            <span class="NineHoleScoreFont"><a href="{% url tools.views.newsletters %}/{{ d.year }}">{{ d.year }}</a></span>  |  
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endif %}
+
+
+{% if newsletter_list %}
+    <table border="0" cellspacing="0" cellpadding="3" width="100%">
+    {% for letter in newsletter_list %}
+        <tr class="{% cycle 'EventList2' 'EventList1' %}">
+            <td><a href="{{ letter.doc.url }}">{{ letter.dt|date:"F Y" }}</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>There are no newsletters.</p>
+{% endif %}
+{% endblock CONTENT %}

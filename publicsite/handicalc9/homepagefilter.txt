@@ -1,0 +1,61 @@
+		
+		
+		$APPLY_FILTER_OR_SORT = 0;
+		if ( $_POST['dofilter'] || ( $_GET["datesort"] || $_GET["coursesort"] || $_GET["scoresort"] ) )
+			$APPLY_FILTER_OR_SORT = 1;
+		?>
+		<br><form action="home.php" method="POST" name="filterform">
+		<table class="FilterTable">
+		<tr><td colspan="4"><b>Choose Scores...</b></td><tr>
+		<?
+		$coursesql = "select concat(ct.name, \" (\", tt.name, \")\") as name, tt.id as teeid from course_tbl ct, tee_tbl tt where tt.courseid = ct.id and ct.userid = ";
+		//$coursesql = "select name, id from course_tbl where userid = \'";
+		$coursesql .= $_SESSION['userid'];
+		$coursesql .= " order by name asc";
+		$courseresult = mysql_query($coursesql) or die("Could not get a list of courses: " . mysql_error());
+		?>
+		<tr><td><b>Course:</b></td><td></td><td><select  name="teeid">
+		<?
+		if ( ($_SESSION['teeid'] || $_SESSION['teeid'] == "Any") && $APPLY_FILTER_OR_SORT )
+			printf("<option selected value=\"Any\">Any</option>");
+		else
+			printf("<option value=\"Any\">Any</option>");
+			
+		while ($courserow = mysql_fetch_array($courseresult))
+		{
+			if ( $_SESSION['teeid'] && $_SESSION['teeid'] == $courserow["teeid"] && $APPLY_FILTER_OR_SORT )
+				printf("<option selected value=\"%s\">%s</option>",$courserow["teeid"],$courserow["name"]);
+			else
+				printf("<option value=\"%s\">%s</option>",$courserow["teeid"],$courserow["name"]);
+		}
+		?>
+		</select>
+		<tr><td><b>From:</b> </td><td></td><td><?if ($_SESSION['fromdt']  && $APPLY_FILTER_OR_SORT) getDateControl(getdate(strtotime($_SESSION['fromdt'])), "from"); else getDateControl(getdate(strtotime(getMinDate())), "from");?> </td><tr>
+		<tr><td><b>To:</b> </td><td></td><td><?if ($_SESSION['todt'] && $APPLY_FILTER_OR_SORT) getDateControl(getdate(strtotime($_SESSION['todt'])), "to"); else getDateControl(getdate(strtotime(getMaxDate())), "to");?> </td></tr>
+		
+		
+		
+		<tr><td><b>Total:</b></td><td>
+		<select name="compOper">
+		<?
+			if ( !$_SESSION['compOper'] || $_SESSION['compOper'] == "=" && $APPLY_FILTER_OR_SORT )
+				printf("<option value=\"=\" selected> = </option>");
+			else
+				printf("<option value=\"=\"> = </option>");
+				
+			if ( $_SESSION['compOper'] == ">" && $APPLY_FILTER_OR_SORT )
+				printf("<option value=\">\" selected> > </option>");
+			else
+				printf("<option value=\">\"> > </option>");
+				
+			if ( $_SESSION['compOper'] == "<" && $APPLY_FILTER_OR_SORT )
+				printf("<option value=\"<\" selected> < </option>");
+			else
+				printf("<option value=\"<\"> < </option>");
+		?>
+		</select></td>
+		<td> <input type="text" name="scores" <?if ($_SESSION['scores'] && $APPLY_FILTER_OR_SORT) printf("value=\"%s\"", $_SESSION['scores']); else printf("value=\"Any\"");?> ></td></tr>
+		<tr><td></td><td></td><td><input type="submit" name="dofilter" value="Apply Filter"></td></tr>
+		</table>
+		</form>
+		<?

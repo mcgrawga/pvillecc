@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block CONTENT %}
+<h1>Contact Us</h1>
+
+{% if club_list %}
+    {% for club in club_list %}
+        <ul>
+        <li>Phone:</li>
+            <ul>
+                <li>{{ club.phone }}</li>
+            </ul>
+        <li>Email:</li>
+            <ul>
+                <li><a href="mailto:{{ club.email }}">{{ club.email }}</a></li>
+            </ul>
+        <li>Address:</li>
+            <ul>
+                <li>{{ club.name }}<br>
+                    {{ club.street }}<br>
+                    {{ club.city }}, {{ club.state.name }} {{ club.zip }}<br>
+                </li>
+            </ul>
+        </ul>
+    {% endfor %}
+{% else %}
+    <p>No contact info.</p>
+{% endif %}
+{% endblock CONTENT %}

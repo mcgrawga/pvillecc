@@ -1,0 +1,36 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}Scores{% endblock %}
+{% block content %}
+<div id="content-main">
+
+<h1>Support</h1>
+
+{% if support_info %}
+        <ul>
+        <li>Name:</li>
+            <ul>
+                <li>{{ support_info.name }}</li>
+            </ul>
+        <li>Phone:</li>
+            <ul>
+                <li>{{ support_info.phone }}</li>
+            </ul>
+        <li>Email:</li>
+            <ul>
+                <li><a href="mailto:{{ support_info.email }}">{{ support_info.email }}</a></li>
+            </ul>
+        <li>Address:</li>
+            <ul>
+                <li>{{ support_info.name }}<br>
+                    {{ support_info.street }}<br>
+                    {{ support_info.city }}, {{ support_info.state }} {{ support_info.zip }}<br>
+                </li>
+            </ul>
+        </ul>
+{% else %}
+    <p>No support info.</p>
+{% endif %}    
+</div>
+{% endblock %}
+

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block CONTENT %}
+    {% if the_member %}
+        <ul>
+        <li><h1>{{the_member.fname}}</h1></li>
+        <ul>
+        <li><h3>{{the_member.email}}</h3></li>
+        </ul></ul><br><br>
+    {% else %}
+        <p>I don't see no fricking member.</p>
+    {% endif %}
+{% endblock CONTENT %}
+
+{% block LEFTNAV %}
+    {{ block.super }}
+    <a href="index.php">&rarr; Admin</a><br />
+{% endblock LEFTNAV %}

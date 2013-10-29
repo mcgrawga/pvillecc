@@ -1,0 +1,519 @@
+body {
+background-color: #FFFFFF;
+background-image: url('../media/sgimages/01.jpg');
+background-repeat: repeat-x;
+font-family: Arial;
+font-size: 13Px;
+color: #000000;
+text-align: center; 
+margin: 61px 0px 0px 0px; 
+}
+
+a:link { 
+text-decoration: underline; 
+font-weight: bold; 
+color: #265A5B; 
+}
+
+a:visited { 
+text-decoration: underline; 
+font-weight: bold; 
+color: #255758; 
+}
+
+a:active { 
+text-decoration: underline; 
+font-weight: bold; 
+color: #000000; 
+}
+
+a:hover { 
+text-decoration: underline; 
+font-weight: bold; 
+color: #000000; 
+}
+
+#left a:link { 
+text-decoration: none; 
+font-weight: normal; 
+color: #000000; 
+}
+
+#left a:visited { 
+text-decoration: none; 
+font-weight: normal; 
+color: #000000; 
+}
+
+#left a:active { 
+text-decoration: none; 
+font-weight: normal; 
+color: #BEE3E4; 
+}
+
+#left a:hover { 
+text-decoration: none; 
+font-weight: bold; 
+color: #BEE3E4; 
+}
+
+#leftlinks a:link { 
+text-decoration: none; 
+font-weight: bold; 
+//color: #265A5B;  
+color:  	Maroon;  
+}
+
+#leftlinks a:visited { 
+text-decoration: none; 
+font-weight: bold; 
+color: #255758; 
+}
+
+#leftlinks a:active { 
+text-decoration: none; 
+font-weight: bold; 
+color: #000000; 
+}
+
+#leftlinks a:hover { 
+text-decoration: none; 
+font-weight: bold; 
+color: #000000; 
+}
+
+
+h1 {
+font-family: Arial; 
+font-weight: bold; 
+color: #449FA7; 
+text-transform: uppercase; 
+font-size: 13px; 
+margin: 10px 0px 20px 0px; 
+border-bottom: 1px solid #449FA7;
+line-height: 2;
+}
+
+h1:first-letter {
+font-family: Arial; 
+font-weight: bold; 
+color: #449FA7; 
+text-transform: uppercase; 
+font-size: 16px; 
+}
+
+h3 {
+font-family: Arial; 
+font-weight: bold; 
+color: #449FA7; 
+text-transform: uppercase; 
+font-size: 13px; 
+margin: 0px 0px 0px 0px; 
+//border-bottom: 1px solid #449FA7;
+line-height: 2;
+}
+
+h3:first-letter {
+font-family: Arial; 
+font-weight: bold; 
+color: #449FA7; 
+text-transform: uppercase; 
+font-size: 16px; 
+}
+
+
+
+h2 {
+font-family: Arial; 
+font-weight: bold; 
+color: #449FA7; 
+text-transform: uppercase; 
+font-size: 13px; 
+margin: 0px 0px 0px 5px; 
+}
+
+h2:first-letter {
+font-family: Arial; 
+font-weight: bold; 
+color: #449FA7; 
+text-transform: uppercase; 
+font-size: 16px; 
+margin: 0px 0px 0px 0px; 
+}
+
+hr {
+border: none; 
+background-color: #CFEAEB; 
+color: #CFEAEB; 
+height: 1px; 
+width: 140px;
+margin: 2px 0px 0px 0px;  
+}
+
+p.side {
+font-family: Arial;
+font-size: 13px;
+color: #000000
+margin: 0px 0px 0px 5px;
+text-align: left; 
+}
+
+form.logintable{
+margin: 0px 0px 10px 0px;
+}
+
+p {
+font-family: Arial;
+font-size: 13px;
+color: #000000;
+//text-align: justify;
+margin: 4px 0px 0px 0px;
+}
+
+#container { 
+background-color: #FFFFFF; 
+background-image: url('../media/sgimages/03.jpg');
+background-repeat: repeat-y;
+margin: auto;
+position:relative;
+padding: 0px; 
+width: 697px;
+text-align: left; 
+} 
+
+#top {
+background-image: url('../media/sgimages/pvillecc.jpg');
+background-repeat: no-repeat; 
+background-color: #FFFFFF; 
+width: 697px; 
+height: 182px; 
+}
+
+#tophandicalc {
+background-image: url('../media/sgimages/pvillecc_handicalc.jpg');
+background-repeat: no-repeat; 
+background-color: #FFFFFF; 
+width: 697px; 
+height: 182px; 
+}
+
+#left {
+position: relative;
+margin: 0px 0px 0px 25px;
+width: 140px;	
+background-color: #FFFFFF; 
+float: left;
+}
+
+#main {
+position: relative;
+width: 450px;
+background-color: #FFFFFF; 
+margin: 0px 0px 2px 195px;  
+min-height: 0px; 
+font-family: Arial; font-size: 13px; 
+}
+
+#main_login {
+position: relative;
+position: relative;
+width: 600px;
+background-color: #FFFFFF; 
+margin: 0px 50px 2px 50px;  
+text-align: center;
+min-height: 0px; 
+font-family: Arial; font-size: 13px; 
+}
+
+#paragraphtext {
+line-height: 1.5; font-family: Arial; font-size: 13px; 
+}
+
+
+.clear {
+width: 450px;
+height: 14px; 
+background-color: #FFFFFF; 
+}
+
+#footer {
+background-image: url('../media/sgimages/04.jpg');
+background-repeat: no-repeat; 
+background-color: #FFFFFF; 
+width: 697px; 
+height: 25px; 
+clear:both;
+}
+
+p, td {font-family: Arial; font-size: 13px;}
+
+
+/* SPECIFIC FORMATS */
+.CourseTable { float: none; background-color: transparent; border-style: solid; border-color: gray; border-width: 1;  font-family: Arial; font-size: 13px;}
+.HeaderTable { float: none; background-color: transparent; border-style: solid; border-color: gray; border-width: 1; width: 550;  font-family: Arial; font-size: 13px;}
+
+
+
+.ScoreCardTable { 	float: none; 
+			background-color: transparent; 
+			font-family: Arial; 
+			font-size: 13px;
+}
+
+.NineHoleScoreFont {
+			font-size: 11px;
+            color: gray;
+}
+
+.PeerReviewText {
+			font-size: 11px;
+            color: black;
+}
+
+.FilterTable { float: none; border-style: solid; border-color: gray; border-width: 1; }
+.ScoreInputBox  { width: 25; font-family: Arial; font-size: 13px;}
+.ScoreInputBoxTotal  { width: 35;  font-family: Arial; font-size: 13px;}
+.HoleNumberBox  { text-align: center; font-family: Arial; font-size: 11px; color: gray;}
+.HoleNumberBoxTotal  { text-align: center; font-family: Arial; font-size: 13px;}
+.RequiredFieldIndicator  { color: red; }
+
+
+.ScoreHistoryTDHeader { padding-right: 10px; background-color: lightblue; text-align: left; font-family: Arial; font-size: 13px; }
+.ScoreHistoryTDScores { padding-right: 10px; text-align: center;  font-family: Arial; font-size: 13px;}
+.ScoreHistoryTDScores1 { padding-right: 10px; text-align: left; background-color:  lavender; font-family: Arial; font-size: 13px;  }
+.ScoreHistoryTDScores2 { padding-right: 10px; text-align: left; background-color:  transparent; font-family: Arial; font-size: 13px;  }
+
+.CourseList1 { padding-right: 10px; text-align: left; background-color:  lavender; font-family: Arial; font-size: 13px;  }
+.CourseList2 { padding-right: 10px; text-align: left; background-color:  transparent; font-family: Arial; font-size: 13px;  }
+
+.EventList1 { padding-right: 10px; text-align: left; background-color:  lavender; font-family: Arial; font-size: 13px;  }
+.EventList2 { padding-right: 10px; text-align: left; background-color:  #F2F2F2; font-family: Arial; font-size: 13px;  }
+
+
+
+.EventDetails {  background-color: transparent; 
+                font-family: Arial; 
+                font-size: 11px;
+                margin: 1px 0px 10px 0px;
+                }
+
+.RecentScoresTD{ font-size: 10px;  }
+.RecentScoresTDHeader{ font-size: 11px; font-weight: bold;  }
+.RecentScoresTableTitle{ font-size: 11px; font-weight: bold;  }
+
+.ScoreHistoryTD { padding-right: 15px; text-align: left font-family: Arial; font-size: 13px;}
+.InputBoxWidth { width:175  font-family: Arial; font-size: 13px;}
+.WelcomeNoteTable { width:550  font-family: Arial; font-size: 13px;}
+.InstructionsTable { width:550  font-family: Arial; font-size: 13px;}
+.CommentBox { width:450; height:175;  font-family: Arial; font-size: 13px;}
+.ScoreCardCommentBox { width:325; height:100;  font-family: Arial; font-size: 13px;}
+
+.RegisterLink { font-size: 12px;}
+
+
+
+.hoverbox
+{
+	cursor: default;
+	list-style: none;
+}
+
+.hoverbox a
+{
+	cursor: default;
+}
+
+.hoverbox a .preview
+{
+	display: none;
+}
+
+.hoverbox a:hover .preview
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+
+.hoverbox img
+{
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+	color: inherit;
+	padding: 2px;
+	vertical-align: top;
+	//width: 191px;
+	//height: 189px;
+	width: 181px;
+	height: 198px;
+	float: left;
+}
+
+img.right { padding: 4px; margin: 0 0 2px 7px; display: inline; }
+img.left { padding: 0px; margin: 7px 7px 2px 0; display: inline; }
+
+.right { float: right; }
+.left { float: left; }
+
+.hoverbox li
+{
+	background: inherit;
+	//border-color: #ddd #bbb #aaa #ccc;
+	//border-style: solid;
+	border-width: 0px;
+	color: inherit;
+	display: inline;
+	float: left;
+	//margin: 3px;
+	//margin: 0px 0px 0px 0px;  
+	//padding: 5px;
+	position: relative;
+}
+
+.hoverbox
+{
+	margin: 0px 0px 0px 0px;  
+	padding: 0px;
+}
+
+.hoverbox .preview
+{
+	border-color: #000;
+	width: 471px;
+	height: 516px;
+	float:  left;
+}
+
+.hoverbox .home_large
+{
+	border-color: #000;
+	width: 471px;
+	height: 516px;
+	float:  left;
+}
+
+.hoverbox a .home_large
+{
+	display: none;
+}
+
+.hoverbox a:hover .home_large
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.hoverbox .stats_large
+{
+	border-color: #000;
+	width: 471px;
+	height: 604px;
+	float:  left;
+}
+
+.hoverbox a .stats_large
+{
+	display: none;
+}
+
+.hoverbox a:hover .stats_large
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.hoverbox .enterscore_large
+{
+	border-color: #000;
+	width: 471px;
+	height: 633px;
+	float:  left;
+}
+
+.hoverbox a .enterscore_large
+{
+	display: none;
+}
+
+.hoverbox a:hover .enterscore_large
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.hoverbox .course_large
+{
+	border-color: #000;
+	width: 471px;
+	height: 511px;
+	float:  left;
+}
+
+.hoverbox a .course_large
+{
+	display: none;
+}
+
+.hoverbox a:hover .course_large
+{
+	display: block;
+	position: absolute;
+	top: -95px;
+	left: -95px;
+	z-index: 1;
+	border-color: gray;
+	border-style: solid;
+	border-width: 1px;
+}
+
+
+/* =Internet Explorer Fixes
+----------------------------------------------------------------------*/
+
+.hoverbox a
+{
+	position: relative;
+}
+
+.hoverbox a:hover
+{
+	display: block;
+	font-size: 100%;
+	z-index: 1;
+}
+
+.hoverbox a:hover .preview
+{
+	top: -38px;
+	left: -50px;
+}
+
+.hoverbox li
+{
+	position: static;
+}

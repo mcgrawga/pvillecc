@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block CONTENT %}
+
+<h1 style="margin: 0px 0px 0px 0px;">Calendar</h1>
+
+{% if year_list %}
+    <div style="margin: 0px 0px 0px 0px;">
+    {% for d in year_list %}
+        {% if forloop.last %}
+            <span class="NineHoleScoreFont"><a class="calendarlinks" href="{% url tools.views.calendar %}/{{ d.year }}">{{ d.year }}</a></span><br><br>
+        {% else %}
+            <span class="NineHoleScoreFont"><a href="{% url tools.views.calendar %}/{{ d.year }}">{{ d.year }}</a></span>  |  
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endif %}
+
+
+{% if event_list %}
+    <table border="0" cellspacing="0" cellpadding="3" width="100%">
+
+    {% for event in event_list %}
+        <tr class="{% cycle 'EventList2' 'EventList1' %}">
+            <td>{{ event.dt|date:"m/d/Y" }}</td>
+            <td><B>{{ event.title }}</B></td>
+            <td>{{ event.tm|time:"g:i a" }}</td>
+            
+            {% if event.desc or event.descdoc %}
+                <td><span class="NineHoleScoreFont"><a href="javascript:void();" onclick="toggle_visibility('desc{{forloop.counter}}');">Details</a></span></td>
+            {% else %}
+                <td></td>
+            {% endif %}
+            
+            {% if event.results or event.resultsdoc %}
+                <td><span class="NineHoleScoreFont"><a href="javascript:void();" onclick="toggle_visibility('results{{forloop.counter}}');">Results</a></span></td>
+            {% else %}
+                <td></td>
+            {% endif %}
+        </tr>
+        
+        
+        
+
+        <tr class="{% cycle 'EventList2' 'EventList1' %}" id="desc{{forloop.counter}}" style="display:none;"><td colspan="5"><div class="EventDetails"><b>Details:</b>
+        {% if event.descdoc %}
+            &nbsp;&nbsp;<a href="{{ event.descdoc.url }}">click here</a>
+        {% endif %}
+        <br>{{ event.desc|safe }}</div></td></tr>
+        
+        <tr class="{% cycle 'EventList2' 'EventList1' %}" id="results{{forloop.counter}}" style="display:none;"><td colspan="5"><div class="EventDetails"><b>Results:</b>
+        {% if event.resultsdoc %}
+            &nbsp;&nbsp;<a href="{{ event.resultsdoc.url }}">click here</a>
+        {% endif %}
+        <br>{{ event.results|safe }}</div></td></tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>There are no calendar events.</p>
+{% endif %}
+{% endblock CONTENT %}

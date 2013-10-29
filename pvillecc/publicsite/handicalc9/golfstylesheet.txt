@@ -1,0 +1,43 @@
+/* GENERAL FORMATS */
+H2 { font-size: 20pt; color: green }
+H3 { font-size: 14pt; color: green }
+A:link { color: green }
+A:visited { color: green }
+A:active { color: green }
+A:hover { color: blue }
+
+
+body 	{ color: green }
+p 	{line-height: 2}
+
+/* SPECIFIC FORMATS */
+.CourseTable { float: none; background-color: transparent; border-style: solid; border-color: gray; border-width: 1 }
+.HeaderTable { float: none; background-color: transparent; border-style: solid; border-color: gray; border-width: 1; width: 550; }
+.QuoteTD { padding-right: 15px; text-align: left; }
+
+
+.ScoreCardTable { float: none; background-color: transparent; }
+.FilterTable { float: none; background-color: transparent; border-style: solid; border-color: gray; border-width: 1 }
+.ScoreInputBox  { width: 25; }
+.ScoreInputBoxTotal  { width: 35; }
+.HoleNumberBox  { text-align: center; }
+.HoleNumberBoxTotal  { text-align: center; }
+.RequiredFieldIndicator  { color: red; }
+
+
+.ScoreHistoryTDHeader { padding-right: 10px; font-size: 14pt; background-color: transparent; text-align: center; }
+.ScoreHistoryTDScores { padding-right: 10px; text-align: center }
+.ScoreHistoryTDScores1 { padding-right: 10px; text-align: center; background-color:  transparent;  }
+.ScoreHistoryTDScores2 { padding-right: 10px; text-align: center; background-color:  transparent;  }
+
+
+.ScoreHistoryTD { padding-right: 15px; text-align: left }
+.CommonHeaderNavTD { padding-right: 10px; text-align: left; width: 150px }
+.CommonHeaderQuoteTD { 15px; text-align: left; width: 385px; border-width: 1; border-style: solid }
+.HandiText { font-size: 16pt; color: green }
+.InputBoxWidth { width:175 }
+.body-style {background: url(gbk.gif) fixed; background-repeat: no-repeat;}
+.WelcomeNoteTable { width:550 }
+.InstructionsTable { width:550 }
+.CommentBox { width:550; height:175; }
+.ScoreCardCommentBox { width:325; height:100; }

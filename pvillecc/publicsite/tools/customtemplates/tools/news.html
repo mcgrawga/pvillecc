@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block CONTENT %}
+
+<h1 style="margin: 0px 0px 0px 0px;">Club News</h1>
+
+{% if year_list %}
+    <div style="margin: 0px 0px 0px 0px;">
+    {% for d in year_list %}
+        {% if forloop.last %}
+            <span class="NineHoleScoreFont"><a class="calendarlinks" href="{% url tools.views.newsitem %}/{{ d.year }}">{{ d.year }}</a></span><br><br>
+        {% else %}
+            <span class="NineHoleScoreFont"><a href="{% url tools.views.newsitem %}/{{ d.year }}">{{ d.year }}</a></span>  |  
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endif %}
+
+
+{% if newsitem_list %}
+    <table border="0" cellspacing="0" cellpadding="3" width="100%">
+
+    {% for newsitem in newsitem_list %}
+        <tr class="{% cycle 'EventList2' 'EventList1' %}">
+            
+            <td><a href="javascript:void();" onclick="toggle_visibility('desc{{forloop.counter}}');">{{ newsitem.title }}</a></td>
+            <td>{{ newsitem.dt|date:"m/d/Y" }}</td>
+        </tr>
+        <tr class="{% cycle 'EventList2' 'EventList1' %}" id="desc{{forloop.counter}}" style="display:none;"><td colspan="3"><div class="EventDetails">{{ newsitem.desc|safe }}</div></td></tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>There are no news items.</p>
+{% endif %}
+{% endblock CONTENT %}

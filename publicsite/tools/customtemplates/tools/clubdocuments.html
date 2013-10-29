@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block CONTENT %}
+
+<h1 style="margin: 0px 0px 0px 0px;">Club Documents</h1>
+
+
+{% if document_list %}
+    <table border="0" cellspacing="0" cellpadding="3" width="100%">
+
+    {% for d in document_list %}
+        <tr class="{% cycle 'EventList2' 'EventList1' %}">
+            <td><a href="{{ d.doc.url }}">{{ d.title }}</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>There are no documents to view.</p>
+{% endif %}
+{% endblock CONTENT %}

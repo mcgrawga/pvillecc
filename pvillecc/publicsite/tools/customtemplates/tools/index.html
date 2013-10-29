@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block CONTENT %}
+<h1>{{ HomePageContent.title|safe }}</h1>
+
+<p>
+
+{% if scores_list %}
+    <div style="float: right; margin: 0px 0px 15px 25px;">
+    <table float="right" border="1" cellspacing="0" cellpadding="2">
+    <tr><td colspan="5" align="center" class="RecentScoresTableTitle"><b>Recent Scores</b></td></tr>
+    <tr><td class="RecentScoresTDHeader"><b>Golfer</b></td><td class="RecentScoresTDHeader"><b>Course</b></td><td class="RecentScoresTDHeader"><b>Score</b></td><td class="RecentScoresTDHeader"><b>Date</b></td></tr>
+    {% for oscore in scores_list %}
+        <tr class="{% cycle 'CourseList2' 'CourseList1'%}"><td class="RecentScoresTD">{{ oscore.fname }}</td><td class="RecentScoresTD">{{ oscore.course }}</td><td class="RecentScoresTD">{{ oscore.score }}</td><td class="RecentScoresTD">{{oscore.dateplayed|date:"M jS" }}</td></tr>
+    {% endfor %}
+    </table></div>
+{% endif %}
+
+{{ HomePageContent.text|safe }}
+
+{% endblock CONTENT %}
